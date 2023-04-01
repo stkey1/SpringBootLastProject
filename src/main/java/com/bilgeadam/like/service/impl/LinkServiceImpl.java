@@ -53,11 +53,6 @@ public class LinkServiceImpl extends BaseService<LinkRepository, LinkMapper, Lin
         return super.saveAll(linkDtoList);
     }
 
-    @Override
-    public List<PointDto> saveAllPoints(List<PointDto> pointDtoList) {
-        return null;
-    }
-
     /**
      * @return
      */

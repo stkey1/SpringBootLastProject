@@ -54,11 +54,7 @@ public class UserServiceImpl extends BaseService<UserRepository, UserMapper, Use
 
         return super.saveAll(UserDtoList);
     }
-
-    @Override
-    public List<PointDto> saveAllPoints(List<PointDto> pointDtoList) {
-        return null;
-    }
+    
 
     /**
      * @return
