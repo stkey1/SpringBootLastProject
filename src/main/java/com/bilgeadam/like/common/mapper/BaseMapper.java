@@ -37,7 +37,7 @@ public interface BaseMapper<T1 extends BaseDto, T2 extends BaseEntity> {
      * @param entitySet
      * @return
      */
-    Set<T1> dtoSetToEntitySet(Set<T2> entitySet);
+    Set<T2> dtoSetToEntitySet(Set<T1> entitySet);
 
     /**
      * @param entitySet

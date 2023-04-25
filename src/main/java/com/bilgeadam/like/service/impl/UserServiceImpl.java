@@ -1,7 +1,6 @@
 package com.bilgeadam.like.service.impl;
 
 import com.bilgeadam.like.common.service.impl.BaseService;
-import com.bilgeadam.like.dto.PointDto;
 import com.bilgeadam.like.dto.UserDto;
 import com.bilgeadam.like.entity.User;
 import com.bilgeadam.like.repository.RoleRepository;
@@ -54,7 +53,7 @@ public class UserServiceImpl extends BaseService<UserRepository, UserMapper, Use
 
         return super.saveAll(UserDtoList);
     }
-    
+
 
     /**
      * @return
@@ -125,7 +124,7 @@ public class UserServiceImpl extends BaseService<UserRepository, UserMapper, Use
                 .orElseThrow(() -> new IllegalStateException("User doesn't exist!"));
 
         user.setSpent(user.getSpent() + spent);
-//        super.save(mapper.entityToDto(user));
+        super.save(mapper.entityToDto(user));
         userRepository.save(user);
     }
 

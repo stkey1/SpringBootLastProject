@@ -3,6 +3,7 @@ package com.bilgeadam.like.entity;
 import com.bilgeadam.like.common.entity.BaseEntity;
 import com.bilgeadam.like.consts.EntityConstants;
 import com.bilgeadam.like.consts.MessageConstants;
+import com.bilgeadam.like.dto.RoleDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

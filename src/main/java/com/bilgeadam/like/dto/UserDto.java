@@ -2,7 +2,6 @@ package com.bilgeadam.like.dto;
 
 import com.bilgeadam.like.common.dto.BaseDto;
 import com.bilgeadam.like.consts.MessageConstants;
-import com.bilgeadam.like.entity.Role;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
