@@ -4,22 +4,20 @@
 
 <div class="manage-user-container">
     <form id="register-form" method="POST">
-        <h2 class="admin-form-title">Manage Roles</h2>
+        <h2 class="admin-form-title">Manage Foods</h2>
         <div class="table-wrapper">
-            <table id="users-table">
+            <table id="foods-table">
                 <tr>
-                    <th>UserID</th>
-                    <th>Username</th>
-                    <th>Email</th>
-                    <th>Roles</th>
+                    <th>FoodID</th>
+                    <th>Category</th>
+                    <th>Title</th>
+                    <th>Price</th>
                     <th>Action</th>
                 </tr>
             </table>
         </div>
     </form>
-
 </div>
 
-<script src="<c:url value="/resources/static/js/Logic.js"/>"></script>
-<script src="<c:url value="/resources/static/js/ManageRoles.js"/>"></script>
+<script src="<c:url value="/resources/static/js/ManageFood.js"/>"></script>
 <c:import url="/resources/templates/Footer.jsp"/>

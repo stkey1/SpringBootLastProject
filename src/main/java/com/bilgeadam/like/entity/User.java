@@ -3,8 +3,6 @@ package com.bilgeadam.like.entity;
 import com.bilgeadam.like.common.entity.BaseEntity;
 import com.bilgeadam.like.consts.EntityConstants;
 import com.bilgeadam.like.consts.MessageConstants;
-import com.bilgeadam.like.dto.RoleDto;
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -12,7 +10,7 @@ import lombok.Setter;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
-import javax.management.relation.Role;
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -23,10 +21,14 @@ import java.util.Set;
 @AllArgsConstructor
 @Setter
 @Getter
-@SQLDelete(sql = "UPDATE like.users set state=0 where id= ? and version=?")
+@SQLDelete(sql = "UPDATE postgres.users set state=0 where id= ? and version=?")
 @Where(clause = EntityConstants.WHERE_CLAUSE)
 @Table(name = "users")
 public class User extends BaseEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "user_id", nullable = false)
+    private Long user_id;
 
     /**
      * username information in User Table
@@ -61,7 +63,7 @@ public class User extends BaseEntity {
     /**
      * Entity Phone Number information
      */
-@Size(min = 6, max = 20)
+    @Size(min = 6, max = 20)
     @Column(name = "phone_number")
     private String phoneNumber;
 
@@ -69,7 +71,7 @@ public class User extends BaseEntity {
      * Spent information
      */
     @Column(name = "spent")
-    private String spent;
+    private int spent;
 
     /**
      * User age information
@@ -97,6 +99,7 @@ public class User extends BaseEntity {
     @JoinColumn(name = "user_id")
     private Set<Role> roles;
 
+
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private Set<Link> links;
@@ -104,4 +107,5 @@ public class User extends BaseEntity {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private Set<Point> points;
+
 }

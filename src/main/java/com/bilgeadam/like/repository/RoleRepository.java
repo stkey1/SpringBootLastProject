@@ -1,5 +1,6 @@
 package com.bilgeadam.like.repository;
 
+
 import com.bilgeadam.like.common.repository.BaseRepository;
 import com.bilgeadam.like.entity.Role;
 import org.springframework.stereotype.Repository;

@@ -1,14 +1,5 @@
 package com.bilgeadam.like.config.audit;
 
-/**
- * @author stkey
- * @customize
- * @add
- * @components
- * @throws
- * @return
- * @since 1.04.2023
- */
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

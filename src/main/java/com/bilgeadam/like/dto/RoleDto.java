@@ -23,4 +23,5 @@ public class RoleDto extends BaseDto {
      * Role Entity name information
      */
     private String name;
+    
 }

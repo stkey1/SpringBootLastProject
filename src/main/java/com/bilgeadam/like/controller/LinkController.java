@@ -3,12 +3,12 @@ package com.bilgeadam.like.controller;
 import com.bilgeadam.like.dto.LinkDto;
 import com.bilgeadam.like.service.LinkService;
 import com.bilgeadam.like.service.UserService;
-import jakarta.servlet.http.HttpSession;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @RestController

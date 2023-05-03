@@ -2,6 +2,7 @@ package com.bilgeadam.like.service.impl;
 
 import com.bilgeadam.like.common.service.impl.BaseService;
 import com.bilgeadam.like.dto.UserDto;
+import com.bilgeadam.like.entity.Role;
 import com.bilgeadam.like.entity.User;
 import com.bilgeadam.like.repository.RoleRepository;
 import com.bilgeadam.like.repository.UserRepository;
@@ -17,7 +18,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.management.relation.Role;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -53,7 +53,6 @@ public class UserServiceImpl extends BaseService<UserRepository, UserMapper, Use
 
         return super.saveAll(UserDtoList);
     }
-
 
     /**
      * @return
@@ -124,7 +123,7 @@ public class UserServiceImpl extends BaseService<UserRepository, UserMapper, Use
                 .orElseThrow(() -> new IllegalStateException("User doesn't exist!"));
 
         user.setSpent(user.getSpent() + spent);
-        super.save(mapper.entityToDto(user));
+//        super.save(mapper.entityToDto(user));
         userRepository.save(user);
     }
 
@@ -133,12 +132,13 @@ public class UserServiceImpl extends BaseService<UserRepository, UserMapper, Use
 
         userDto.setPassword(passwordEncoder.encode(userDto.getPassword()));
         userDto = super.save(userDto);
-        roleRepository.save(new com.bilgeadam.like.entity.Role(mapper.dtoToEntity(userDto)));
+        roleRepository.save(new Role(mapper.dtoToEntity(userDto)));
     }
 
     @Override
     public void makeAdmin(UUID id) {
-        roleRepository.save(new com.bilgeadam.like.entity.Role(id,"ADMIN"));
+
+        roleRepository.save(new Role(id, "ADMIN"));
     }
 
     @Override
@@ -176,7 +176,7 @@ public class UserServiceImpl extends BaseService<UserRepository, UserMapper, Use
         ArrayList<GrantedAuthority> authorities = new ArrayList<>();
 
         for (Role roles : user.getRoles())
-            authorities.add(new SimpleGrantedAuthority("ROLE_" + roles.getRoleName()));
+            authorities.add(new SimpleGrantedAuthority("ROLE_" + roles.getName()));
 
         return new org.springframework.security.core.userdetails.User(
                 user.getUsername(), user.getPassword(), authorities);

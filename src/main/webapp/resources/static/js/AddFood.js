@@ -1,23 +1,21 @@
-
-//DÜZENLENECEK
 $(document).ready(() => $('#price').val(''));
 
 $('#price').keypress(e => !String.fromCharCode(e.which).match(/\D/g));
 
-$('#add-link-form').validate({
+$('#add-food-form').validate({
     submitHandler: form => {
         $.ajax({
-            url: 'admin/add-link-action',
+            url: 'admin/add-food-action',
             method: "POST",
-            data: $('#add-link-form').serialize(),
+            data: $('#add-food-form').serialize(),
             success: data => {
                 let message = document.getElementById('admin-prompt');
 
                 if (data === 'error')
                     message.innerHTML = '<p class="tomato-text">Please fill out all the fields properly.</p>'
                 else {
-                    message.innerHTML = '<p class="green-text">New link added!</p>'
-                    $('#add-link-form').trigger("reset");
+                    message.innerHTML = '<p class="green-text">New food added!</p>'
+                    $('#add-food-form').trigger("reset");
                 }
             }
         })

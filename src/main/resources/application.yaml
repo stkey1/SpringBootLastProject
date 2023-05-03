@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: 1234
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        default_schema: postgres
+        format_sql: true
+    hibernate:
+      ddl-auto: update
+      hbm2ddl-auto: update
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+      type:
+        descriptor:
+          sql:
+            BasicBinder: ERROR
+
+#server.error.include-message=always
+#spring.web.resources.cache.cachecontrol.max-age=369d
+

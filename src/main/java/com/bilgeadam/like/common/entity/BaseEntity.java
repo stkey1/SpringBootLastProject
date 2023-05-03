@@ -10,10 +10,6 @@ package com.bilgeadam.like.common.entity;
  * @since 29.03.2023
  */
 import com.bilgeadam.like.consts.EntityConstants;
-import jakarta.persistence.Column;
-import jakarta.persistence.EntityListeners;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.MappedSuperclass;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,10 +19,12 @@ import org.hibernate.annotations.Where;
 import org.springframework.data.annotation.*;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import javax.persistence.Column;
+import javax.persistence.EntityListeners;
+import javax.persistence.GeneratedValue;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-@MappedSuperclass
 @EntityListeners({AuditingEntityListener.class})
 @Setter
 @Getter

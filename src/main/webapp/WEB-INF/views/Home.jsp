@@ -2,16 +2,16 @@
 <%@ page isELIgnored="false" %>
 <c:import url="/resources/templates/CustomerHeader.jsp"/>
 
-<div class="food-container">
+<div class="link-container">
     <h1>Order Your Favourite Foods!</h1>
     <h2 class="category-title" id="category-title">
         Category:
-        <label onclick="fetchFoods('Burger')" id="Burger">Burger</label>
-        <label onclick="fetchFoods('Pizza')" id="Pizza">Pizza</label>
-        <label onclick="fetchFoods('Drinks')" id="Drinks">Drinks</label>
-        <label onclick="fetchFoods('Coffee')" id="Coffee">Coffee</label>
-        <label onclick="fetchFoods('Desert')" id="Desert">Desert</label>
-        <label onclick="fetchFoods('Sides')" id="Sides">Sides</label>
+        <label onclick="" >Burger</label>
+        <label onclick="" >Pizza</label>
+        <label onclick="" >Drinks</label>
+        <label onclick="" >Coffee</label>
+        <label onclick="" >Desert</label>
+        <label onclick="" >Sides</label>
     </h2>
     <table id="foods-table"></table>
 </div>

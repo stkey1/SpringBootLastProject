@@ -1,14 +1,5 @@
 package com.bilgeadam.like.config;
 
-/**
- * @author stkey
- * @customize
- * @add
- * @components
- * @throws
- * @return
- * @since 1.04.2023
- */
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -28,34 +19,34 @@ public class AppSecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
-//    @Bean
-//    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
-//        httpSecurity
-//                .authorizeRequests()
-//                .antMatchers("/admin/**", "/dashboard", "/manage-roles", "/manage-user", "/add-user", "/manage-food", "/add-food").hasRole("ADMIN")
-//                .antMatchers("/profile", "/profile-modify", "/payment", "/comments").hasAnyRole("CUSTOMER", "ADMIN")
-//                .antMatchers("/").permitAll()
-//                .and()
-//                .formLogin()
-//                .loginPage("/login")
-//                .usernameParameter("username")
-//                .passwordParameter("password")
-//                .defaultSuccessUrl("/login-success")
-//                .failureUrl("/login?error")
-//                .and()
-//                .rememberMe()
-//                .rememberMeParameter("remember-me")
-//                .rememberMeCookieName("BurgerFactory-LoggedIn-User")
-//                .tokenValiditySeconds((int) TimeUnit.DAYS.toSeconds(68))
-//                .key("ccc")
-//                .and()
-//                .logout()
-//                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-//                .logoutSuccessUrl("/login")
-//                .and()
-//                .exceptionHandling()
-//                .accessDeniedPage("/403");
-//
-//        return httpSecurity.build();
-//    }
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
+        httpSecurity
+                .authorizeRequests()
+                .antMatchers("/admin/**", "/dashboard", "/manage-roles", "/manage-user", "/add-user", "/manage-food", "/add-food").hasRole("ADMIN")
+                .antMatchers("/customer/**", "/profile", "/profile-modify", "/payment", "/comments").hasAnyRole("CUSTOMER", "ADMIN")
+                .antMatchers("/").permitAll()
+                .and()
+                .formLogin()
+                .loginPage("/login")
+                .usernameParameter("username")
+                .passwordParameter("password")
+                .defaultSuccessUrl("/login-success")
+                .failureUrl("/login?error")
+                .and()
+                .rememberMe()
+                .rememberMeParameter("remember-me")
+                .rememberMeCookieName("BurgerFactory-LoggedIn-User")
+                .tokenValiditySeconds((int) TimeUnit.DAYS.toSeconds(68))
+                .key("ccc")
+                .and()
+                .logout()
+                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+                .logoutSuccessUrl("/login")
+                .and()
+                .exceptionHandling()
+                .accessDeniedPage("/403");
+
+        return httpSecurity.build();
+    }
 }

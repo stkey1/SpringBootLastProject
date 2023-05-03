@@ -2,7 +2,6 @@ package com.bilgeadam.like.controller;
 
 import com.bilgeadam.like.dto.UserDto;
 import com.bilgeadam.like.service.UserService;
-import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -10,6 +9,7 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.security.Principal;
 import java.util.Objects;
@@ -50,10 +50,10 @@ public class MainController {
         return "Home";
     }
 
-    @RequestMapping(value = "/search-foods", method = {RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(value = "/search-links", method = {RequestMethod.GET, RequestMethod.POST})
     public String showSearchFoodsPage() {
 
-        return "SearchFoods";
+        return "SearchLinks";
     }
 
     @RequestMapping("/login")
@@ -92,13 +92,11 @@ public class MainController {
 
     @GetMapping("/403")
     public String showDeniedPage() {
-
         return "403";
     }
 
     @GetMapping("/project-details")
     public String showDetailsPage() {
-
         return "ProjectDetails";
     }
 }
