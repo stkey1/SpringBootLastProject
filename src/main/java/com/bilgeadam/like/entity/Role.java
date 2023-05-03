@@ -17,7 +17,7 @@ import java.util.UUID;
 @Setter
 @RequiredArgsConstructor
 @AllArgsConstructor
-@SQLDelete(sql = "UPDATE burger_station.roles set state=0 where id= ? and version=?")
+@SQLDelete(sql = "UPDATE postgres.roles set state=0 where id= ? and version=?")
 @Where(clause = EntityConstants.WHERE_CLAUSE)
 @Table(name = "roles")
 public class Role extends BaseEntity {
