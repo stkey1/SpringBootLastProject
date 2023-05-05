@@ -1,34 +1,34 @@
-$(document).ready(() => fetchAllFoods())
+$(document).ready(() => fetchAllLinks())
 
-function fetchAllFoods() {
+function fetchAllLinks() {
 
-    $.getJSON("get-all-foods",
+    $.getJSON("get-all-links",
         data => {
-            let foods = '';
+            let links = '';
 
             $.each(data, (key, value) => {
-                foods +=
-                    '<tr id="food' + value['id'] + '" >' +
+                links +=
+                    '<tr id="link' + value['id'] + '" >' +
                     '    <td>' + value['id'] + '</td> ' +
                     '    <td>' + value['category'] + '</td> ' +
                     '    <td>' + value['title'] + '</td> ' +
                     '    <td>' + value['price'] + '</td> ' +
                     '    <td> ' +
-                    '        <a class="tomato-text" onclick="' + 'deleteFood(\'' + value['id'] + '\')">Delete</a> ' +
+                    '        <a class="tomato-text" onclick="' + 'deleteLink(\'' + value['id'] + '\')">Delete</a> ' +
                     '    </td>' +
                     '</tr>';
             })
 
-            $('#foods-table').append(foods);
+            $('#links-table').append(links);
         }
     )
 }
 
-function deleteFood(id) {
+function deleteLink(id) {
 
     $.ajax({
-        url: 'admin/delete-food/' + id,
+        url: 'admin/delete-link/' + id,
         method: "GET",
-        success: $('#food' + id).remove()
+        success: $('#link' + id).remove()
     });
 }

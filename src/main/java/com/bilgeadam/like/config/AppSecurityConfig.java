@@ -23,8 +23,8 @@ public class AppSecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
                 .authorizeRequests()
-                .antMatchers("/admin/**", "/dashboard", "/manage-roles", "/manage-user", "/add-user", "/manage-food", "/add-food").hasRole("ADMIN")
-                .antMatchers("/customer/**", "/profile", "/profile-modify", "/payment", "/comments").hasAnyRole("CUSTOMER", "ADMIN")
+                .antMatchers("/admin/**", "/dashboard", "/manage-roles", "/manage-user", "/add-user", "/manage-link", "/add-link").hasRole("ADMIN")
+                .antMatchers("/customer/**", "/profile", "/profile-modify", "/payment").hasAnyRole("CUSTOMER", "ADMIN")
                 .antMatchers("/").permitAll()
                 .and()
                 .formLogin()
@@ -36,7 +36,7 @@ public class AppSecurityConfig {
                 .and()
                 .rememberMe()
                 .rememberMeParameter("remember-me")
-                .rememberMeCookieName("BurgerFactory-LoggedIn-User")
+                .rememberMeCookieName("Like-LoggedIn-User")
                 .tokenValiditySeconds((int) TimeUnit.DAYS.toSeconds(68))
                 .key("ccc")
                 .and()

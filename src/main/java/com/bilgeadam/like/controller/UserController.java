@@ -74,8 +74,8 @@ public class UserController {
         userService.removeAdmin(id);
     }
 
-    @GetMapping("/delete-food/{id}")
-    void deleteFood(@PathVariable UUID id) {
+    @GetMapping("/delete-link/{id}")
+    void deleteLink(@PathVariable UUID id) {
         linkService.deleteById(id);
     }
 

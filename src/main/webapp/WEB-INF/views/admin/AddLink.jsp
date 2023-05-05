@@ -4,8 +4,8 @@
 <c:import url="/resources/templates/AdminHeader.jsp"/>
 
 <div class="add-user-form">
-    <form:form id="add-food-form" method="POST" action="add-food-action" modelAttribute="food">
-        <h2 class="admin-form-title">Add Foods</h2>
+    <form:form id="add-link-form" method="POST" action="add-link-action" modelAttribute="link">
+        <h2 class="admin-form-title">Add links</h2>
         <fieldset>
             <div>
                 <div>
@@ -22,9 +22,9 @@
                     </form:select>
                 </div>
                 <div>
-                    <label class="form-label" for="food-name">Food Name</label>
-                    <form:input class="form-input-box" id="food-name" maxlength="30"
-                                placeholder="Enter food name here" type="text" path="title"/>
+                    <label class="form-label" for="link-name">link Name</label>
+                    <form:input class="form-input-box" id="link-name" maxlength="30"
+                                placeholder="Enter link name here" type="text" path="title"/>
                 </div>
                 <div>
                     <label class="form-label" for="price">Price</label>
@@ -33,18 +33,17 @@
                 </div>
                 <div>
                     <label class="form-label" for="description">Description</label>
-                    <form:textarea id="description" name="description" class="food-description"
-                                   placeholder="Enter food description here" rows="4" path="description"/>
+                    <form:textarea id="description" name="description" class="link-description"
+                                   placeholder="Enter link description here" rows="4" path="description"/>
                 </div>
             </div>
         </fieldset>
         <p id="admin-prompt"></p>
         <div class="center">
-            <input id="form-submit" type="submit" class="button" value="Add Food">
+            <input id="form-submit" type="submit" class="button" value="Add link">
         </div>
     </form:form>
 </div>
 
 <script src="<c:url value="/resources/static/js/Logic.js"/>"></script>
-<script src="<c:url value="/resources/static/js/AddFood.js"/>"></script>
-<c:import url="/resources/templates/Footer.jsp"/>
+<script src="<c:url value="/resources/static/js/AddLink.js"/>"></script>

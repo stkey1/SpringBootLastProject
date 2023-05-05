@@ -41,9 +41,9 @@ $('#add-link-form').validate({
     },
     messages: {
         title: {
-            required: "Please enter a food title",
-            minlength: "Food title must consist of at least 5 characters",
-            maxlength: "Food title must be no more than 30 characters long"
+            required: "Please enter a link title",
+            minlength: "link title must consist of at least 5 characters",
+            maxlength: "link title must be no more than 30 characters long"
         },
         price: {
             required: "Please enter a price",

@@ -13,16 +13,16 @@ public interface LinkRepository extends BaseRepository<Link, UUID> {
     /**
      * Example of derived query in spring data jpa
      *
-     * @param title of food which has comments
-     * @return Food object related with selected title
+     * @param title of Link which has comments
+     * @return Link object related with selected title
      */
     Link findByIgnoreCaseTitle(String title);
 
     /**
      * Example of derived query in spring data jpa
      *
-     * @param category of food which has category
-     * @return list of Food objects related with selected category
+     * @param category of link which has category
+     * @return list of link objects related with selected category
      */
     List<Link> findByCategory(String category);
 

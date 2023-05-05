@@ -4,7 +4,7 @@
 
 <div class="manage-user-container">
     <form id="register-form" method="POST">
-        <h2 class="admin-form-title">Manage Foods</h2>
+        <h2 class="admin-form-title">Manage links</h2>
         <div class="table-wrapper">
             <table id="points-table">
                 <tr>
@@ -19,5 +19,4 @@
     </form>
 </div>
 
-<script src="<c:url value="/resources/static/js/ManageFood.js"/>"></script>
-<c:import url="/resources/templates/Footer.jsp"/>
+<script src="<c:url value="/resources/static/js/ManageLink.js"/>"></script>

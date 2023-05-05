@@ -58,4 +58,3 @@
 
 <script src="<c:url value="/resources/static/js/Logic.js"/>"></script>
 <script src="<c:url value="/resources/static/js/LoginValidate.js"/>"></script>
-<c:import url="/resources/templates/Footer.jsp"/>

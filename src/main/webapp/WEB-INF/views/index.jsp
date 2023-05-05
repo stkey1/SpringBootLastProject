@@ -29,10 +29,9 @@
     <img alt="logo" class="welcome-logo" src="<c:url value="/resources/static/img/logo.svg"/>">
     <div class="welcome-message">
         <h1 class="welcome-title">Eat and Order<br>Do It Easy</h1>
-        <p class="margin-bottom">Choose your favourite foods and get it to taste the amazing taste, enjoy it with your
+        <p class="margin-bottom">Choose your favourite links and get it to taste the amazing taste, enjoy it with your
             family or friends.</p>
         <a class="button" href="./home">Get Started</a>
     </div>
 </div>
 
-<c:import url="/resources/templates/Footer.jsp"/>

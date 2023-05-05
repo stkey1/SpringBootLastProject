@@ -3,7 +3,7 @@
 <c:import url="/resources/templates/CustomerHeader.jsp"/>
 
 <div class="link-container">
-    <h1>Order Your Favourite Foods!</h1>
+    <h1>Order Your Favourite Links!</h1>
     <h2 class="category-title" id="category-title">
         Category:
         <label onclick="" >Burger</label>
@@ -13,9 +13,8 @@
         <label onclick="" >Desert</label>
         <label onclick="" >Sides</label>
     </h2>
-    <table id="foods-table"></table>
+    <table id="links-table"></table>
 </div>
 
-<script src="<c:url value="/resources/static/js/FoodBox.js"/>"></script>
 <script src="<c:url value="/resources/static/js/Home.js"/>"></script>
 <c:import url="/resources/templates/Footer.jsp"/>

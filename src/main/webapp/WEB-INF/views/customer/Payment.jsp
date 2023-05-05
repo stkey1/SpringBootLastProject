@@ -7,10 +7,10 @@
 <div class="form-container">
     <form:form action="payment-action" id="payment-form" method="GET">
         <div>
-            <h1 class="payment-form-title">${food.title}</h1>
-            <p class="payment-description">${food.description}</p>
+            <h1 class="payment-form-title">${link.title}</h1>
+            <p class="payment-description">${link.description}</p>
             <h3 class="payment-price">
-                Price: <span id="price" class="white-back-text">${food.price}TL</span>
+                Price: <span id="price" class="white-back-text">${link.price}TL</span>
             </h3>
         </div>
         <div class="currency-text">

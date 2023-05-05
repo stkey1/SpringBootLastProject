@@ -33,7 +33,7 @@
 
             <sec:authorize access="hasAnyRole('CUSTOMER', 'ADMIN')">
                 <li><a href="./home">Home</a></li>
-                <li><a href="./search-foods">Search Foods</a></li>
+                <li><a href="./search-links">Search Links</a></li>
                 <li><a href="./profile">View Profile</a></li>
                 <li><a href="<c:url value="/logout"/>">Log Out</a></li>
                 <li class="username"><a href="./profile">

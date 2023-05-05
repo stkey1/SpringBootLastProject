@@ -23,7 +23,7 @@
 
             <sec:authorize access="isAnonymous()">
                 <li><a href="./home">Home</a></li>
-                <li><a href="./search-foods">Search Foods</a></li>
+                <li><a href="./search-links">Search links</a></li>
                 <li><a href="<c:url value="/login"/>">Log In</a></li>
                 <li><a href="./register">Register</a></li>
             </sec:authorize>

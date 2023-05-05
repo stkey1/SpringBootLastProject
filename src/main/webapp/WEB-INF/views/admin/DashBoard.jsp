@@ -16,11 +16,11 @@
             <div><a href="./manage-user">
                 <button>Manage Users</button>
             </a></div>
-            <div><a href="./add-food">
-                <button>Add Foods</button>
+            <div><a href="./add-link">
+                <button>Add Links</button>
             </a></div>
-            <div><a href="./manage-food">
-                <button>Manage Foods</button>
+            <div><a href="./manage-link">
+                <button>Manage Links</button>
             </a></div>
         </div>
     </div>

@@ -77,17 +77,6 @@ public class CustomerController {
         return "redirect:/profile?updated";
     }
 
-//    @RequestMapping(value = "/payment", method = {RequestMethod.GET, RequestMethod.POST})
-//    public String showPaymentPage(@RequestParam("linkid") UUID linkid,
-//                                  Model model,
-//                                  HttpSession session) {
-//
-//        model.addAttribute("link", linkService.findById(linkid));
-//        session.setAttribute("price", linkService.findById(linkid).getCategory());
-//
-//        return "customer/Payment";
-//    }
-
     @GetMapping("/getUserById/{id}")
     UserDto getUserById(@PathVariable UUID id) {
 
@@ -95,35 +84,5 @@ public class CustomerController {
     }
 
 
-    @RequestMapping(value = "/comments/{linkId}", method = {RequestMethod.GET, RequestMethod.POST})
-    public String selectLinkID(@PathVariable("linkId") UUID linkId,
-                               HttpSession session) {
 
-        session.setAttribute("linkId", linkId);
-        return "redirect:/comments";
-    }
-
-    @RequestMapping(value = "/links", method = {RequestMethod.GET, RequestMethod.POST})
-    public String showCommentPage(Model model, HttpSession session) {
-
-        UUID linkId = session.getAttribute("linkId") == null ? UUID.fromString("") : (UUID) session.getAttribute("linkId");
-        model.addAttribute("link", linkService.findById(linkId));
-
-        return "customer/Links";
-    }
-
-//    @RequestMapping(value = "/post-comments")
-//    public String postComments(@RequestParam("linkId") UUID linkId,
-//                               @RequestParam("link") String postedComment,
-//                               Principal principal) {
-//
-//        LinkDto commentDto = new CommentDto();
-//        commentDto.setComment(postedComment);
-//        commentDto.setPostedBy(principal.getName());
-//        commentDto.setFoodId(foodId);
-//
-//        commentService.saveComment(commentDto);
-//
-//        return "redirect:/comments?posted";
-//    }
 }

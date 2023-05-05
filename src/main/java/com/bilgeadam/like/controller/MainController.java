@@ -51,7 +51,7 @@ public class MainController {
     }
 
     @RequestMapping(value = "/search-links", method = {RequestMethod.GET, RequestMethod.POST})
-    public String showSearchFoodsPage() {
+    public String showSearchLinksPage() {
 
         return "SearchLinks";
     }

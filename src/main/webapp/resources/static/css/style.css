@@ -368,7 +368,7 @@ footer {
 
 /*======================= Home ======================*/
 
-.food-container {
+.link-container {
     position: relative;
     display: flex;
     overflow: hidden;
@@ -386,7 +386,7 @@ footer {
     box-shadow: rgba(0, 0, 0, 0.9) 0 5px 15px;
 }
 
-.food-container h1 {
+.link-container h1 {
     padding-bottom: 5px;
     filter: drop-shadow(5px 3px 5px black);
     -webkit-filter: drop-shadow(5px 3px 5px black);
@@ -405,7 +405,7 @@ footer {
     color: dodgerblue;
 }
 
-.food-box {
+.link-box {
     width: 370px;
     height: 100%;
     margin: auto 10px;
@@ -415,21 +415,21 @@ footer {
     box-shadow: rgba(0, 0, 0, 0.9) 0 5px 15px;
 }
 
-.food-container .button {
+.link-container .button {
     display: inline-block;
     padding: 8px 25px;
 }
 
-.food-box h2 {
+.link-box h2 {
     padding-bottom: 10px;
 }
 
-.food-price {
+.link-price {
     font-size: 20px;
     font-weight: bold;
 }
 
-.food-container td {
+.link-container td {
     display: inline-block;
     padding: 20px;
 }
@@ -862,7 +862,7 @@ input[type='radio'].form-input-error {
     text-align: center;
 }
 
-.food-description {
+.link-description {
     font-family: 'Inter', sans-serif;
     width: 100%;
     margin: 5px 0 0 0;
@@ -931,16 +931,16 @@ input[type='radio'].form-input-error {
     margin-bottom: 0;
 }
 
-.food-box p, .food-box h2 {
+.link-box p, .link-box h2 {
     text-align: center;
     color: white;
 }
 
-.food-container-buttons {
+.link-container-buttons {
     text-align: center;
 }
 
-table#foods-table {
+table#links-table {
     text-align: center;
 }
 

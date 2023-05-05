@@ -1,18 +1,18 @@
-$(document).ready(() => fetchFoods('Burger'))
+$(document).ready(() => fetchLinks('Link'))
 
-function fetchFoods(category) {
+function fetchLinks(category) {
 
     $.ajax({
-        url: 'api/v1/fetch-foods-by-category/' + category,
+        url: 'api/v1/fetch-links-by-category/' + category,
         method: "GET",
         success: data => {
 
             if (data.length === 0) {
-                document.getElementById('foods-table').innerHTML = "<p class='not-found'>No foods available in this category.</p>";
+                document.getElementById('links-table').innerHTML = "<p class='not-found'>No links available in this category.</p>";
                 return;
             }
 
-            writeFoodHtml(data);
+            writeLink   Html(data);
         }
     });
 
