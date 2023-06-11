@@ -10,6 +10,7 @@ import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
+import java.util.Set;
 import java.util.UUID;
 
 @Entity
@@ -21,14 +22,12 @@ import java.util.UUID;
 @Where(clause = EntityConstants.WHERE_CLAUSE)
 @Table(name = "roles")
 public class Role extends BaseEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "role_id", nullable = false)
-    private Long role_id;
 
     /**
      * Role entity user relation information
      */
+
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
@@ -45,7 +44,6 @@ public class Role extends BaseEntity {
     }
 
     public Role(UUID id, String admin) {
-
         this.setId(id);
         this.name = admin;
     }

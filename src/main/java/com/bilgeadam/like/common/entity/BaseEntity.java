@@ -1,14 +1,5 @@
 package com.bilgeadam.like.common.entity;
 
-/**
- * @author stkey
- * @customize
- * @add
- * @components
- * @throws
- * @return
- * @since 29.03.2023
- */
 import com.bilgeadam.like.consts.EntityConstants;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,15 +7,15 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 import org.hibernate.annotations.Where;
-import org.springframework.data.annotation.*;
+import org.springframework.data.annotation.CreatedBy;
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import javax.persistence.Column;
-import javax.persistence.EntityListeners;
-import javax.persistence.GeneratedValue;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+@MappedSuperclass
 @EntityListeners({AuditingEntityListener.class})
 @Setter
 @Getter
@@ -46,41 +37,27 @@ public abstract class BaseEntity {
      * Entity Created Date
      */
     @CreatedDate
-    @Column(name = "create_date", nullable = false, updatable = false)
+    @Column(name = "create_date", updatable = false)
     private LocalDateTime createDate;
 
     /**
      * Entity Created By
      */
     @CreatedBy
-    @Column(name = "created_by", nullable = false, updatable = false)
+    @Column(name = "created_by", updatable = false)
     private String createdUser;
-
-    /**
-     * Entity Update Date
-     */
-    @LastModifiedDate
-    @Column(name = "update_date")
-    private LocalDateTime updateDate;
-
-    /**
-     * Entity Updated By
-     */
-    @LastModifiedBy
-    @Column(name = "updated_by")
-    private String updatedUser;
 
     /**
      * State of entity
      * deleted = 0, undeleted=1
      */
     @Column(name = "state", nullable = false)
-    private final short state=1;
+    private short state=1;
 
     /**
      * Entity Version
      */
     @Version
-    @Column(name = "version", nullable = false)
+    @Column(name = "version")
     private Long version;
 }

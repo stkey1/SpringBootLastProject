@@ -7,7 +7,7 @@
     <form:form id="login-form" method="POST">
         <h2 class="login-form-title">Log In</h2>
 
-        <fieldset>
+        <field-set>
             <div>
                 <label for="username">Username</label>
                 <input autofocus class="form-input-box" id="username" name="username"

@@ -25,10 +25,6 @@ public class PointController {
         return new ResponseEntity<>(pointService.findAll(), HttpStatus.OK);
     }
 
-    @GetMapping("/welcome")
-    public String showwelcomePage() {
-        return "welcome jsp";
-    }
 
 //    @GetMapping("/get-by-category")
 //    ResponseEntity<List<PointDto>> getByCategory(@RequestParam("categoryName") String categoryName) {

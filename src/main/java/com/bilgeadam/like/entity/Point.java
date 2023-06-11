@@ -21,10 +21,6 @@ import java.util.Set;
 @Where(clause = EntityConstants.WHERE_CLAUSE)
 @Table(name = "points")
 public class Point extends BaseEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "point_id", nullable = false)
-    private Long pointId;
 
     /**
      * Point category information

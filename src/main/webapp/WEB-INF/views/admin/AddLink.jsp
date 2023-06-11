@@ -11,14 +11,14 @@
                 <div>
                     <label class="form-label" for="category">Category</label>
                     <form:select class="form-input-box" id="category" path="category">
-                        <form:option value="Burger">Burger</form:option>
-                        <form:option value="Pizza">Pizza</form:option>
-                        <form:option value="Salad">Salad</form:option>
-                        <form:option value="Pasta">Pasta</form:option>
-                        <form:option value="Drinks">Drinks</form:option>
-                        <form:option value="Coffee">Coffee</form:option>
-                        <form:option value="Desert">Desert</form:option>
-                        <form:option value="Sides">Sides</form:option>
+                        <form:option value="Link 1">TRAVEL</form:option>
+                        <form:option value="Link 2">TRAVEL</form:option>
+                        <form:option value="Link 3">TRAVEL</form:option>
+                        <form:option value="Link 4">TRAVEL</form:option>
+                        <form:option value="Link 5">TRAVEL</form:option>
+                        <form:option value="Link 6">TRAVEL</form:option>
+                        <form:option value="Link 7">TRAVEL</form:option>
+                        <form:option value="Link 8">Sides</form:option>
                     </form:select>
                 </div>
                 <div>

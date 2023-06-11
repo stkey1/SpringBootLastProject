@@ -7,7 +7,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="<c:url value="/resources/static/img/logo.svg"/>"/>
+    <link rel="icon" type="image/png" href="<c:url value="/resources/static/img/logo.jpg"/>"/>
     <link rel="preload" href="<c:url value="/resources/static/img/background.jpg"/>" as="image">
     <link href="<c:url value="/resources/static/css/style.css"/>" rel="stylesheet" type="text/css">
     <script src="<c:url value="/resources/static/js/jquery-3.6.0.min.js"/>"></script>
@@ -17,13 +17,12 @@
 <body>
 
 <header>
-    <%--    <a class="logo" href="./dashboard"><img src="<c:url value="/resources/static/img/nav-logo.svg"/>" alt="logo"></a>--%>
+    <%--    <a class="logo" href="./dashboard"><img src="<c:url value="/resources/static/img/nav-logo.jpg"/>" alt="logo"></a>--%>
     <nav>
         <ul class="nav-links">
 
             <sec:authorize access="isAnonymous()">
                 <li><a href="./home">Home</a></li>
-                <li><a href="./search-links">Search links</a></li>
                 <li><a href="<c:url value="/login"/>">Log In</a></li>
                 <li><a href="./register">Register</a></li>
             </sec:authorize>

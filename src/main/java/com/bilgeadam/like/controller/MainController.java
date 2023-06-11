@@ -29,11 +29,12 @@ public class MainController {
         webDataBinder.registerCustomEditor(String.class, stringTrimmerEditor);
     }
 
-    @GetMapping("/")
-    public String showWelcomePage() {
+//    @GetMapping("/")
+//    public String showWelcomePage() {
+//
+//        return "index";
+//    }
 
-        return "index";
-    }
 
     @GetMapping("/login-success")
     public String defaultAfterLogin(HttpServletRequest request) {
@@ -48,12 +49,6 @@ public class MainController {
     public String showHomePage() {
 
         return "Home";
-    }
-
-    @RequestMapping(value = "/search-links", method = {RequestMethod.GET, RequestMethod.POST})
-    public String showSearchLinksPage() {
-
-        return "SearchLinks";
     }
 
     @RequestMapping("/login")
@@ -97,6 +92,6 @@ public class MainController {
 
     @GetMapping("/project-details")
     public String showDetailsPage() {
-        return "ProjectDetails";
+        return "projectDetails";
     }
 }

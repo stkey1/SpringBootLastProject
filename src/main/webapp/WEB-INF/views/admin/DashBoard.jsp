@@ -4,7 +4,7 @@
 
 <div class="admin-container" id="welcome">
     <div class="admin-items">
-        <img class="admin-logo" src="<c:url value="/resources/static/img/admin-logo.svg"/>" alt="logo">
+        <img class="admin-logo" src="<c:url value="/resources/static/img/admin-logo.jpg"/>" alt="logo">
         <div class="admin-buttons">
             <h1 class="admin-title">Admin Panel</h1>
             <div><a href="./manage-roles">

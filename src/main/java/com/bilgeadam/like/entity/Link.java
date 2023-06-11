@@ -20,10 +20,6 @@ import javax.validation.constraints.*;
 @Where(clause = EntityConstants.WHERE_CLAUSE)
 @Table(name = "links")
 public class Link extends BaseEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "link_id", nullable = false)
-    private Long linkId;
 
     /**
      * Link category information

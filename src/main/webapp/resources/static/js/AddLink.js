@@ -1,5 +1,4 @@
 
-//DÜZENLENECEK
 $(document).ready(() => $('#price').val(''));
 
 $('#price').keypress(e => !String.fromCharCode(e.which).match(/\D/g));

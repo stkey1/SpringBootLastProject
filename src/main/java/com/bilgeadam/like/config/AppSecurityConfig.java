@@ -7,6 +7,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import java.util.concurrent.TimeUnit;
@@ -19,34 +20,33 @@ public class AppSecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
-    @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
-        httpSecurity
-                .authorizeRequests()
-                .antMatchers("/admin/**", "/dashboard", "/manage-roles", "/manage-user", "/add-user", "/manage-link", "/add-link").hasRole("ADMIN")
-                .antMatchers("/customer/**", "/profile", "/profile-modify", "/payment").hasAnyRole("CUSTOMER", "ADMIN")
-                .antMatchers("/").permitAll()
-                .and()
-                .formLogin()
-                .loginPage("/login")
-                .usernameParameter("username")
-                .passwordParameter("password")
-                .defaultSuccessUrl("/login-success")
-                .failureUrl("/login?error")
-                .and()
-                .rememberMe()
-                .rememberMeParameter("remember-me")
-                .rememberMeCookieName("Like-LoggedIn-User")
-                .tokenValiditySeconds((int) TimeUnit.DAYS.toSeconds(68))
-                .key("ccc")
-                .and()
-                .logout()
-                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                .logoutSuccessUrl("/login")
-                .and()
-                .exceptionHandling()
-                .accessDeniedPage("/403");
+@Bean
+public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
+    httpSecurity
+            .authorizeRequests()
+            .antMatchers("/admin/**", "/dashboard", "/manage-roles", "/manage-user", "/add-user", "/manage-food", "/add-food").hasRole("ADMIN")
+            .antMatchers("/customer/**", "/profile", "/profile-modify", "/payment", "/comments").hasAnyRole("CUSTOMER", "ADMIN")
+            .antMatchers("/").permitAll()
+            .and()
+            .formLogin()
+            .loginPage("/login")
+            .usernameParameter("username")
+            .passwordParameter("password")
+            .defaultSuccessUrl("/login-success")
+            .failureUrl("/login?error")
+            .and()
+            .rememberMe()
+            .rememberMeParameter("remember-me")
+            .tokenValiditySeconds((int) TimeUnit.DAYS.toSeconds(68))
+            .key("ccc")
+            .and()
+            .logout()
+            .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+            .logoutSuccessUrl("/login")
+            .and()
+            .exceptionHandling()
+            .accessDeniedPage("/403");
 
-        return httpSecurity.build();
-    }
+    return httpSecurity.build();
+}
 }

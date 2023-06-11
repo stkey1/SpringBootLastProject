@@ -566,17 +566,6 @@ input[type='radio'].form-input-error {
     color: black;
 }
 
-.search-input-box {
-    font-family: 'Inter', sans-serif;
-    font-size: 17px;
-    align-self: center;
-    width: 75%;
-    margin: 20px 0;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-}
-
 .not-found {
     font-size: 20px;
     color: tomato;

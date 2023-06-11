@@ -1,6 +1,7 @@
 package com.bilgeadam.like.service.impl;
 
 import com.bilgeadam.like.common.service.impl.BaseService;
+import com.bilgeadam.like.dto.RoleDto;
 import com.bilgeadam.like.dto.UserDto;
 import com.bilgeadam.like.entity.Role;
 import com.bilgeadam.like.entity.User;
@@ -18,9 +19,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 @Service
 public class UserServiceImpl extends BaseService<UserRepository, UserMapper, User, UserDto> implements UserService {
@@ -132,7 +131,7 @@ public class UserServiceImpl extends BaseService<UserRepository, UserMapper, Use
 
         userDto.setPassword(passwordEncoder.encode(userDto.getPassword()));
         userDto = super.save(userDto);
-        roleRepository.save(new Role(mapper.dtoToEntity(userDto)));
+
     }
 
     @Override
@@ -176,6 +175,7 @@ public class UserServiceImpl extends BaseService<UserRepository, UserMapper, Use
         ArrayList<GrantedAuthority> authorities = new ArrayList<>();
 
         for (Role roles : user.getRoles())
+
             authorities.add(new SimpleGrantedAuthority("ROLE_" + roles.getName()));
 
         return new org.springframework.security.core.userdetails.User(

@@ -25,10 +25,6 @@ import java.util.Set;
 @Where(clause = EntityConstants.WHERE_CLAUSE)
 @Table(name = "users")
 public class User extends BaseEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "user_id", nullable = false)
-    private Long user_id;
 
     /**
      * username information in User Table
