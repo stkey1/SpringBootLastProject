@@ -1,5 +1,8 @@
 package com.bilgeadam.like.service;
-
+/**
+ * @author stkey
+ * @since 29.03.2023
+ */
 import com.bilgeadam.like.dto.UserDto;
 import org.springframework.security.core.userdetails.UserDetailsService;
 

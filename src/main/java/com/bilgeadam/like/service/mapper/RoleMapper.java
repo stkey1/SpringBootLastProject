@@ -1,5 +1,8 @@
 package com.bilgeadam.like.service.mapper;
-
+/**
+ * @author stkey
+ * @since 29.03.2023
+ */
 import com.bilgeadam.like.common.mapper.BaseMapper;
 import com.bilgeadam.like.dto.RoleDto;
 import com.bilgeadam.like.dto.UserDto;

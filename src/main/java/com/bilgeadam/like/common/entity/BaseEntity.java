@@ -1,5 +1,8 @@
 package com.bilgeadam.like.common.entity;
-
+/**
+ * @author stkey
+ * @since 29.03.2023
+ */
 import com.bilgeadam.like.consts.EntityConstants;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -2,11 +2,6 @@ package com.bilgeadam.like.consts;
 
 /**
  * @author stkey
- * @customize
- * @add
- * @components
- * @throws
- * @return
  * @since 29.03.2023
  */
 

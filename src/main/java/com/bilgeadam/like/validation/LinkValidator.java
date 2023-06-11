@@ -1,5 +1,8 @@
 package com.bilgeadam.like.validation;
-
+/**
+ * @author stkey
+ * @since 29.03.2023
+ */
 import com.bilgeadam.like.dto.LinkDto;
 import com.bilgeadam.like.dto.PointDto;
 import com.bilgeadam.like.entity.Link;

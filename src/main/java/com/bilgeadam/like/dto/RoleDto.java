@@ -1,5 +1,8 @@
 package com.bilgeadam.like.dto;
-
+/**
+ * @author stkey
+ * @since 31.03.2023
+ */
 import com.bilgeadam.like.common.dto.BaseDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;

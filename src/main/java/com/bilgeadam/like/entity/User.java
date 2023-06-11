@@ -1,5 +1,8 @@
 package com.bilgeadam.like.entity;
-
+/**
+ * @author stkey
+ * @since 29.03.2023
+ */
 import com.bilgeadam.like.common.entity.BaseEntity;
 import com.bilgeadam.like.consts.EntityConstants;
 import com.bilgeadam.like.consts.MessageConstants;

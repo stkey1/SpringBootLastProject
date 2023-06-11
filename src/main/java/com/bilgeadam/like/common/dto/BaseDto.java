@@ -1,12 +1,6 @@
 package com.bilgeadam.like.common.dto;
-
-/**
+ /**
  * @author stkey
- * @customize
- * @add
- * @components
- * @throws
- * @return
  * @since 29.03.2023
  */
 import lombok.AllArgsConstructor;

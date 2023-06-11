@@ -2,11 +2,6 @@ package com.bilgeadam.like.common.repository;
 
 /**
  * @author stkey
- * @customize
- * @add
- * @components
- * @throws
- * @return
  * @since 29.03.2023
  */
 import com.bilgeadam.like.common.entity.BaseEntity;

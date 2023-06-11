@@ -1,5 +1,8 @@
 package com.bilgeadam.like.common.service;
-
+/**
+ * @author stkey
+ * @since 29.03.2023
+ */
 import com.bilgeadam.like.common.dto.BaseDto;
 
 import java.util.List;

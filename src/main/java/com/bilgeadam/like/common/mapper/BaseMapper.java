@@ -2,13 +2,9 @@ package com.bilgeadam.like.common.mapper;
 
 /**
  * @author stkey
- * @customize
- * @add
- * @components
- * @throws
- * @return
  * @since 29.03.2023
  */
+
 import com.bilgeadam.like.common.dto.BaseDto;
 import com.bilgeadam.like.common.entity.BaseEntity;
 
